@@ -161,7 +161,7 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 		<!-- log end -->
-		<!--  -->
+		<!--servlet jsp相关-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
