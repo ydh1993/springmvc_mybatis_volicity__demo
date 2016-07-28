@@ -38,8 +38,9 @@
   <mvc:annotation-driven /> 
 <!-- 设置视图解析工具 -->  
    <bean id="viewResolver"  
-       class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">  
+       class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">  
        <property name="suffix" value=".html" />  
+       <property name="layoutUrl" value="layoutNull.html" />
        <!-- 避免乱码 -->  
        <property name="contentType" value="text/html;charset=UTF-8" />  
        <property name="dateToolAttribute" value="dateTool" />  
@@ -53,5 +54,7 @@
     <mvc:resources mapping="/css/**" location="/META-INF/css/"
     	cache-period="31556926" /> 
     <mvc:resources mapping="/images/**" location="META-INF/images/"
+    	cache-period="31556926" />
+    <mvc:resources mapping="/**" location="META-INF/"
     	cache-period="31556926" />
 </beans>
